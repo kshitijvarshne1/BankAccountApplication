@@ -24,5 +24,10 @@ public class SavingAmount extends Account {
         }
 
     }
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }
 

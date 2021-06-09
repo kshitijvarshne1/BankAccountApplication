@@ -6,6 +6,7 @@
  */
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Account implements AccountADT{
     private long accountNumber;
@@ -83,6 +84,18 @@ public class Account implements AccountADT{
         else{
             this.balance-=newTransaction.getAmount();
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Account{" +
+                "accountNumber=" + accountNumber +
+                ", accountTitle='" + accountTitle + '\'' +
+                ", dateCreated='" + dateCreated + '\'' +
+                ", balance=" + balance +
+                ", interestRate=" + interestRate +'\n'+
+                ", allTransaction=" + Arrays.toString(new ArrayList[]{allTransaction}) +
+                '}';
     }
 }
 
