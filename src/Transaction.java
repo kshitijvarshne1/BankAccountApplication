@@ -49,5 +49,16 @@ public class Transaction {
     public void setAmount(long amount) {
         this.amount = amount;
     }
+
+
+    @Override
+    public String toString() {
+        return "Transaction{" +
+                "transactionNumber=" + transactionNumber +
+                ", transactionDate='" + transactionDate + '\'' +
+                ", transactionType='" + transactionType + '\'' +
+                ", amount=" + amount +
+                '}';
+    }
 }
 
