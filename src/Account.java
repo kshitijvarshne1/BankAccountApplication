@@ -15,6 +15,8 @@ public class Account implements AccountADT{
     private long interestRate;
     private ArrayList<Transaction> allTransaction;
 
+    public Account(){}
+
     public Account(long accountNumber, String accountTitle, String dateCreated, long balance, long interestRate) {
         this.accountNumber = accountNumber;
         this.accountTitle = accountTitle;
@@ -24,5 +26,63 @@ public class Account implements AccountADT{
         this.allTransaction= new ArrayList<>();
     }
 
+    public long getAccountNumber() {
+        return accountNumber;
+    }
+
+    public void setAccountNumber(long accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
+    public String getAccountTitle() {
+        return accountTitle;
+    }
+
+    public void setAccountTitle(String accountTitle) {
+        this.accountTitle = accountTitle;
+    }
+
+    public String getDateCreated() {
+        return dateCreated;
+    }
+
+    public void setDateCreated(String dateCreated) {
+        this.dateCreated = dateCreated;
+    }
+
+    public long getBalance() {
+        return balance;
+    }
+
+    public void setBalance(long balance) {
+        this.balance = balance;
+    }
+
+    public long getInterestRate() {
+        return interestRate;
+    }
+
+    public void setInterestRate(long interestRate) {
+        this.interestRate = interestRate;
+    }
+
+    public ArrayList<Transaction> getAllTransaction() {
+        return allTransaction;
+    }
+
+    public void setAllTransaction(ArrayList<Transaction> allTransaction) {
+        this.allTransaction = allTransaction;
+    }
+
+    @Override
+    public void addTransaction(Transaction newTransaction){
+        allTransaction.add(newTransaction);
+        if(newTransaction.getTransactionType().equalsIgnoreCase("deposit")){
+            this.balance+=newTransaction.getAmount();
+        }
+        else{
+            this.balance-=newTransaction.getAmount();
+        }
+    }
 }
 

@@ -6,5 +6,6 @@
  */
 
 public interface AccountADT {
+    public void addTransaction(Transaction newTransaction);
 }
 
