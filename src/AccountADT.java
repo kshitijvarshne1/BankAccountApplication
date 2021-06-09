@@ -7,5 +7,6 @@
 
 public interface AccountADT {
     public void addTransaction(Transaction newTransaction);
+    public String toString();
 }
 
