@@ -17,5 +17,37 @@ public class Transaction {
         this.transactionType = transactionType;
         this.amount = amount;
     }
+
+    public long getTransactionNumber() {
+        return transactionNumber;
+    }
+
+    public void setTransactionNumber(long transactionNumber) {
+        this.transactionNumber = transactionNumber;
+    }
+
+    public String getTransactionDate() {
+        return transactionDate;
+    }
+
+    public void setTransactionDate(String transactionDate) {
+        this.transactionDate = transactionDate;
+    }
+
+    public String getTransactionType() {
+        return transactionType;
+    }
+
+    public void setTransactionType(String transactionType) {
+        this.transactionType = transactionType;
+    }
+
+    public long getAmount() {
+        return amount;
+    }
+
+    public void setAmount(long amount) {
+        this.amount = amount;
+    }
 }
 
